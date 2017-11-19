@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Mostrar Opción</title>
+    <h1>Opción</h1>
+
+
+</head>
+
+
+<body>
+    <table>
+        <tr>
+            <th> Opciones  </th>
+            <th> Restaurante </th>
+        </tr>
+        <tr>
+            <td th:text="${choice.nombre_Opcion}">   </td>
+            <td th:text="${choice.category_restaurant.name}"> </td>
+        </tr>
+    </table>
+</body>
+
+
+</html>

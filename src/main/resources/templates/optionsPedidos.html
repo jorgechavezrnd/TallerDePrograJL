@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <a th:href="${'/pedido/new'}">New Pedido</a>
+    <div th:if="${not #lists.isEmpty(pedidos)}">
+    <h1>Lista de Pedidos</h1>
+
+        <form th:action="@{/pedido/new}" method="get">
+            <button class="btn btn-md btn-warning btn-block" type="Submit">New Pedido</button>
+        </form>
+        <table class="table table-striped">
+            <tr>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Precio</th>
+                <th>Detalles</th>
+                <th>Editar Direccion</th>
+            </tr>
+            <tr th:each="pedido : ${pedidos}">
+                <td th:text="${pedido.nombre_Pedido}"></td>
+                <td th:text="${pedido.direccion}"></td>
+                <td th:text="${pedido.precio_Pedido}"></td>
+                <td><a th:href="${'/pedido/' + pedido.id}">View</a></td>
+                <td><a th:href="${'/pedido/edit/' + pedido.id}">Edit Direccion</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

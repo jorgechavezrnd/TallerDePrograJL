@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>RESTAURANT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<h2 class="btn btn-md btn-warning btn-block" type="Submit">RESTAURANT DETAILS</h2>
+
+
+
+<b>ID:</b> <p th:text="${restaurant.id}"></p>
+<b>ADDRESS:</b> <p th:text="${restaurant.address}"></p>
+<b>CELL:</b><p th:text="${restaurant.cell}"></p>
+<b>DESCRIPTION:</b><p th:text="${restaurant.description}"></p>
+<b>EMAIL:</b><p th:text="${restaurant.email}"></p>
+<b>NAME:</b><p th:text="${restaurant.name}"></p>
+<b>PHONE:</b><p th:text="${restaurant.phone}"></p>
+</body>
+</html>

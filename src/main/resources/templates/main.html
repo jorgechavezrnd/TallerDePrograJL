@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css" />
+
+    <title>Blog Restaurante</title>
+    <style type="text/css">
+        <!--
+        body {
+            background-image: url(http://yavoyencomiendas.com/pedidos/img/art/yavoy_combo1.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div#menu{
+            width: 200px;
+            margin-top: 50px;
+        }
+
+        div#menu ul{
+            list-style: none;
+        }
+
+        div#menu ul li{
+            margin-top: 15px;
+            font-family: Tahoma;
+            font-size: 15px;
+            background-color: #639bb3;
+            width: 160px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 0px 20px 20px 0px;
+            padding-left: 20px;
+            box-shadow: 5px 0px 10px #939393;
+            -webkit-transition: padding-left 0.6s;
+        }
+
+        div#menu ul li:hover{
+            padding-left: 50px;
+            color: white;
+        }
+        -->
+    </style>
+</head>
+
+<body>
+<input type="checkbox" id="btn-nav" class="checkbox" />
+<header>
+    <div class="header-container">
+        <label for="btn-nav" class="btn-label">
+            <div class="header-button"></div>
+        </label>
+    </div>
+</header>
+
+<div>
+    <div id="menu">
+        <ul>
+            <li><a th:href="${'/login'}" align="middle" style="text-decoration: none;" >Iniciar Sesion</a></li>
+            <li><a th:href="${'/registration'}" align="middle" style="text-decoration: none;" >Registrarse</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+
+

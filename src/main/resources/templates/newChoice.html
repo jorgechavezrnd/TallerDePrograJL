@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Option</title>
+
+</head>
+<body>
+<div class="container">
+
+    <h2>Crear Opcion</h2>
+    <div>
+        <form class="form-horizontal" th:object="${choice}" th:action="@{/choice}" method="post">
+            <input type="hidden" th:field="*{id}"/>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> Nombre :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{nombre_Opcion}"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Restaurante :</label>
+                <div class="col-sm-10">
+                    <select th:field="*{category_restaurant}">
+                        <option th:each="category_restaurant : ${restaurants}"
+                                th:value="${category_restaurant.id}"
+                                th:text="${category_restaurant.name}"></option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> Precio :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{precio_Opcion}"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <button type="submit" class="btn btn-default">Guardar</button>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+</body>
+</html>

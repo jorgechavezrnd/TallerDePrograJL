@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css" />
+    <title>Administrador</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1 class="btn btn-md btn-warning btn-block" type="Submit">Bienvenido Administrador</h1>
+
+    <!--
+        <a th:href="${'/login'}">Cerrar Sesion</a>
+        <a th:href="${'/choices'}">Opciones</a>
+        <a th:href="${'admin/restaurants'}">Restaurants</a>
+    -->
+
+<body>
+    <input type="checkbox" id="btn-nav" class="checkbox" />
+    <header>
+        <div class="header-container">
+            <label for="btn-nav" class="btn-label">
+                <div class="header-button"></div>
+            </label>
+        </div>
+    </header>
+
+
+    <div>
+        <div id="menu">
+            <ul>
+                <li><a th:href="${'/login'}" align="middle" style="text-decoration: none;" >Cerrar Sesion</a></li>
+                <li><a th:href="${'/choices'}" align="middle" style="text-decoration: none;" >Opciones</a></li>
+                <li><a th:href="${'admin/restaurants'}" align="middle" style="text-decoration: none;" >Restaurants</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+        <table>
+            <tr>
+
+
+            </tr>
+        </table>
+    </body>
+</body>
+    </html>

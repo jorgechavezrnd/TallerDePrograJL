@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Spring Boot CRUD</title>
+</head>
+<body>
+<a th:href="${'/choice/new'}">New Option</a>
+<div th:if="${not #lists.isEmpty(choices)}">
+    <h2>Option List</h2>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+        </tr>
+        <tr th:each="choice : ${choices}">
+            <td th:text="${choice.nombre_Opcion}"></td>
+            <td th:text="${choice.precio_Opcion}"></td>
+            <td><a th:href="${'/choice/' + choice.id}">View</a></td>
+            <td><a th:href="${'/choice/edit/' + choice.id}">Edit</a></td>
+            <td><a th:href="${'/choice/delete/' + choice.id}">Delete</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
